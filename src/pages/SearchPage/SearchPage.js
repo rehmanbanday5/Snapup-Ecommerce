@@ -9,7 +9,7 @@ import { fetchAsyncSearchProduct, getSearchProducts, setSearchTerm, getSearchPro
 
 const SearchPage = () => {
   const dispatch = useDispatch();
-  // const {searchTerm } = useParams(); 
+  const {searchTerm } = useParams(); 
   const searchProducts = useSelector(getSearchProducts);
   const searchProductsStatus = useSelector(getSearchProductsStatus);
 
