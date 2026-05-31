@@ -21,12 +21,12 @@ const ProductSinglePage = () => {
   useEffect(() => {
     dispatch(fetchAsyncProductSingle(id));
 
-    if(cartMessageStatus){
+    if (cartMessageStatus) {
       setTimeout(() => {
         dispatch(setCartMessageOff());
       }, 2000);
     }
-  }, [cartMessageStatus]);
+  }, [dispatch, id, cartMessageStatus]);
 
   let discountedPrice = (product?.price) - (product?.price * (product?.discountPercentage / 100));
   if(productSingleStatus === STATUS.LOADING) {
