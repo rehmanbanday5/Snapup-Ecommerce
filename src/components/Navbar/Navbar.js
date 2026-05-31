@@ -19,9 +19,9 @@ const Navbar = () => {
     setSearchTerm(e.target.value);
   }
 
-  useEffect(() => {
-    dispatch(getCartTotal());
-  }, [carts])
+useEffect(() => {
+  dispatch(getCartTotal());
+}, [dispatch, carts]);
 
   return (
     <nav className='navbar'>

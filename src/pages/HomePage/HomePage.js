@@ -17,10 +17,10 @@ function HomePage() {
   const dispatch = useDispatch();
   const categories = useSelector(getAllCategories);
   const { category } = useParams();
-
-  useEffect(() => {
-    dispatch(fetchAsyncProducts(50));
-  }, []);
+  
+useEffect(() => {
+  dispatch(fetchAsyncProducts(50));
+}, [dispatch]);
 
   const products = useSelector(getAllProducts);
   const productStatus = useSelector(getAllProductsStatus);
